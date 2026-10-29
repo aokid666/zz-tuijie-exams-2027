@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: pip install PyMuPDF==1.26.6 rapidocr-onnxruntime==1.4.4
+      - run: python tools/recover.py
       - run: mkdir -p _site/data && python tools/parse.py
       - name: Save source pairing audit
         if: always()
