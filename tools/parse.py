@@ -99,4 +99,8 @@ def main():
  dump('book.json',book);dump(ID+'.json',{'bookId':ID,'questions':qs,'pages':[{'page':i+1,'width':p['width'],'height':p['height'],'text':p['text']} for i,p in enumerate(pages)]})
 if __name__=='__main__':
  import hashlib
- main()
+ try:main()
+ except Exception:
+  import traceback
+  (ROOT/'data/parser-error.txt').write_text(traceback.format_exc())
+  raise
