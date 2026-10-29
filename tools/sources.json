@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tuijie8-question",
+    "name": "2027考研政治--8套卷-试题册--腿姐陆寓丰.pdf",
+    "parts": [
+      "pdf/tuijie8-question.01.part"
+    ],
+    "sha256": "85365c5c7e868e79f7f519b203907c5a60d493e49154a9fda7d1527a2d7133bf",
+    "bytes": 15087675
+  },
+  {
+    "id": "tuijie8-answer",
+    "name": "2027考研政治--8套卷-解析册--腿姐陆寓丰.pdf",
+    "parts": [
+      "pdf/tuijie8-answer.01.part",
+      "pdf/tuijie8-answer.02.part",
+      "pdf/tuijie8-answer.03.part",
+      "pdf/tuijie8-answer.04.part",
+      "pdf/tuijie8-answer.05.part"
+    ],
+    "sha256": "ff08bf4801727e4cc8159b235a930822c894a0b6da39ac79ca0ccf05d93e3c7d",
+    "bytes": 190102062
+  }
+]
