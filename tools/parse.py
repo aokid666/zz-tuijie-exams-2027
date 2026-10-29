@@ -5,7 +5,9 @@ def dump(name,data):
  text=json.dumps(data,ensure_ascii=False,separators=(',',':'));(ROOT/'data'/name).write_text(text);(ROOT/'_site/data'/name).write_text(text)
 def norm(t):return re.sub(r'\s+','',t)
 def useful(l,p):
- t=l['t'].strip();return 20<l['b'][1]<p['height']-20 and not re.search(r'后续更新|夸克网盘|835784031|考研政治冲刺专项.*[册卷]|第[一二三四五六七八]套卷|参考答案速查|[一二三]、?[单双多]项选择|单项选择题|多项选择题',t)
+ t=l['t'].strip();
+ if l['b'][1]>p['height']*.85 and re.fullmatch(r'[·.：:•\s]*\d{1,3}[·.：:•\s]*',t):return False
+ return 20<l['b'][1]<p['height']-20 and not re.search(r'后续更新|夸克网盘|835784031|考研政治冲刺专项.*[册卷]|第[一二三四五六七八]套卷|参考答案速查|[一二三]、?[单双多]项选择|单项选择题|多项选择题',t)
 def head(l,p):
  if l['b'][0]>p['width']*.26:return None
  m=re.match(r'^(\d{1,2})\s*[.．、。，,:：]\s*(.*)',l['t'])
