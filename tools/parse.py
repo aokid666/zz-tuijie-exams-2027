@@ -15,7 +15,7 @@ subjects=['马克思主义基本原理','毛泽东思想和中国特色社会主
 def groups(pages,starts,answer=False):
  out=[]
  for s,start in enumerate(starts):
-  end=starts[s+1] if s+1<len(starts) else len(pages)+1;found={};cur=None;expected=1;quick={}
+  end=starts[s+1] if s+1<len(starts) else len(pages);found={};cur=None;expected=1;quick={}
   pending_key=None
   for p in pages[start-1:end-1]:
    rows=[{**l,'p':p['page']} for l in p['lines'] if useful(l,p)]
